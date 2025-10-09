@@ -68,13 +68,15 @@ const ChatPage = () => {
             </div>
           )}
           {isLoading && (
-            <div className="flex items-center gap-2 self-start bg-white/10 text-white px-4 py-2 rounded-xl w-fit">
-              <span className="font-medium">Thinking</span>
-              <span className="flex gap-1">
-                <span className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-                <span className="w-2 h-2 bg-white rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-                <span className="w-2 h-2 bg-white rounded-full animate-bounce"></span>
-              </span>
+            <div className="self-start bg-white/10 text-transparent rounded-2xl w-64 h-10 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shimmer_1.5s_infinite]" />
+              <style jsx>{`
+                @keyframes shimmer {
+                  100% {
+                    transform: translateX(100%);
+                  }
+                }
+              `}</style>
             </div>
           )}
 
