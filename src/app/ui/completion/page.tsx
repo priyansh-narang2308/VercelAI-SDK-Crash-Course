@@ -46,7 +46,7 @@ const ChatPage = () => {
   };
 
   return (
-    <div className="flex justify-center h-screen bg-black p-8">
+    <div className="flex justify-center h-screen  p-8">
       <div className="flex flex-col w-full max-w-3xl">
         <header className="text-center mb-6">
           <h1 className="text-4xl font-bold text-white">Vercel AI SDK</h1>
@@ -99,7 +99,7 @@ const ChatPage = () => {
             disabled={isLoading}
             variant={"default"}
             type="submit"
-            className="bg-white text-black cursor-pointer px-6 py-4 rounded-xl shadow hover:bg-white/80 active:scale-95 transition-all"
+            className=" cursor-pointer px-6 py-4 rounded-xl active:scale-95 transition-all"
           >
             Send
           </Button>

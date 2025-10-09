@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -26,8 +27,15 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${quicksand.className}`}
       >
-      <Toaster/>
-        {children}
+        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
